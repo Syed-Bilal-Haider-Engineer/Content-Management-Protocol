@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-server-status',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './server-status.component.html',
   styleUrl: './server-status.component.css'
 })
