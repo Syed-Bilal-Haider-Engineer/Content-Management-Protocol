@@ -1,1 +1,12 @@
- <app-new-ticket></app-new-ticket>
+<div>
+    <ul>
+        @for (item of tickets; track $index) {
+        <li><app-ticket [data]="item" (onClose)="handleCloseTicket($event)"></app-ticket></li>
+        } @empty {
+        <li>No tickets found.</li>
+        }
+    </ul>
+</div>
+<div id="new-ticket">
+  <app-new-ticket (onAddTicket)="handleNewTicket($event)"></app-new-ticket>
+</div>
