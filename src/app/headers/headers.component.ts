@@ -9,5 +9,5 @@ import { ButtonComponent } from "../shared/button/button.component";
   styleUrl: './headers.component.css'
 })
 export class HeadersComponent {
-
+  
 }

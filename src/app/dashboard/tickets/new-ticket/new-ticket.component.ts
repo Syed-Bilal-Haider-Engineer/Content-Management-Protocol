@@ -12,12 +12,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class NewTicketComponent {
   private form = viewChild.required<ElementRef<HTMLFormElement>>('form');
+  
   onAddTicket = output<{
     title: string;
     description: string;
     date: Date;
     status: "open" | "in-progress" | "closed";
-    id: number;
+    id: number
+    ;
   }>();
   onSubmit(event: Event, titleElement: string, textValue: string) {
     event?.preventDefault();

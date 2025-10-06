@@ -72,3 +72,18 @@ p button {
 p button:hover {
   color: #ec9fea;
 }
+
+.ticket-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;                  
+}
+
+.status {
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  margin-top: 15px   
+}
+
+

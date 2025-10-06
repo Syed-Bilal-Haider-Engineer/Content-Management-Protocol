@@ -7,8 +7,8 @@
       }"
     ></div>
     <button (click)="onDetailsToggle()">
-      <span class="text">{{data().title}}</span>
-      <span  class="icon">
+      <span class="text">{{ data().title }}</span>
+      <span class="icon">
         @if (isDetailsVisible()) {
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,9 +44,16 @@
   </h3>
 
   @if (isDetailsVisible()) {
-  <p>{{data().description}}</p>
-
-  @if (data().status === 'open') {
-  <p (click)="onCloseTicket()"><button>Mark as completed</button></p>
-  } }
+  <p>{{ data().description }}</p>
+  <div class="ticket-description">
+    <button>
+      <p>{{ data().date | timeAgo }}</p>
+    </button>
+    @if (data().status === 'open') {
+    <p (click)="onCloseTicket()" class="status" appConfirm>
+      <button>Mark as completed</button>
+    </p>
+    }
+  </div>
+  }
 </article>
